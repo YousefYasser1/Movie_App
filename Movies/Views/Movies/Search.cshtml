@@ -1,0 +1,22 @@
+﻿@model Movie
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="data:image\/*;base64,@(Convert.ToBase64String(Model.Poster))" class="img-fluid rounded-start" alt="Poster">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h4 class="card-title">Title : <span>@Model.Title</span></h4>
+                <p class="card-text">StoryLine :<span> @Model.StoryLine</span></p>
+                <p class="card-text">Type : @Model.Genra.Name</p>
+                <p class="card-text">Rate : <span><i class="bi bi-star-fill" style="color:darkorange"></i>@Model.Rate</span></p>
+            </div>
+        </div>
+        <div class="mt-2">
+            <a class="btn btn-primary" asp-action="Index">
+                <i class="bi bi-backspace"></i>
+                Back
+            </a>
+        </div>
+    </div>
+</div>
